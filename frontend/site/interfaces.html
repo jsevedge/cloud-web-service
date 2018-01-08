@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Interfaces List: {{interfaces.length}} found </h2>
+    <ul>
+      <li ng-repeat="entry in interfaces track by $index">
+        <span class="entries"></span>Interface Name: {{entry.name}}, IP: {{entry.ipConfigurations[0].privateIPAddress}}</span>
+        <br/><label>Details:
+            <input type="checkbox" ng-model="details">
+        </label>
+        <label>IP Configurations:
+            <input type="checkbox" ng-model="ipConfigurations">
+        </label>
+        <div class="check-element funky-show-hide" ng-show="details"><pre>{{entry | json}}</pre></div>
+        <div class="check-element funky-show-hide" ng-show="ipConfigurations"><pre>{{entry.ipConfigurations | json}}</pre></div>
+      </li>
+    </ul>
+</div>

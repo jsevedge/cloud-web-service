@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>VM List: {{vms.length}} found </h2>
+      <ul>
+        <li ng-repeat="entry in vms | orderBy:'name'">
+          <span class="entries"></span>VM Name: {{entry.name}}, Power State: {{entry.instanceView.statuses[1].displayStatus}}</span>
+          <br/><label>Details:
+              <input type="checkbox" ng-model="details">
+          </label>
+          <label>Instance View:
+              <input type="checkbox" ng-model="instanceView">
+          </label>
+          <form ng-show="entry.instanceView.statuses[1].displayStatus == 'VM running'">
+            <input type="submit" value="Power Off" ng-model="submit" ng-click="submitted=true" ng-show="!submitted">
+            <input type="submit" value="Confirm Power Off" ng-click="powerVmOff(entry.name, entry.id)" ng-show="submitted">
+          </form>
+          <div class="check-element funky-show-hide" ng-show="details"><pre>{{entry | json}}</pre></div>
+          <div class="check-element funky-show-hide" ng-show="instanceView"><pre>{{entry.instanceView | json}}</pre></div>
+        </li>
+      </ul>
+  </div>

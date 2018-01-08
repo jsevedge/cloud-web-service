@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Deployments List: {{deployments.length}} found </h2>
+    <ul>
+      <li ng-repeat="entry in deployments track by $index">
+        <span class="entries"></span>Deployment Name: {{entry[0].name}}, Status: {{entry[0].properties.provisioningState}}</span>
+        <br/><label>Details:
+            <input type="checkbox" ng-model="details">
+        </label>
+        <label>Properties:
+            <input type="checkbox" ng-model="properties">
+        </label>
+        <div class="check-element funky-show-hide" ng-show="details"><pre>{{entry[0] | json}}</pre></div>
+        <div class="check-element funky-show-hide" ng-show="properties"><pre>{{entry[0].properties | json}}</pre></div>
+      </li>
+    </ul>
+</div>

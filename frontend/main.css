@@ -1,0 +1,65 @@
+h1 {
+  font-size: x-large;
+  font-family: Courier;
+  background: teal;
+  padding: 10px;
+  margin: 20;
+  color:white;
+  text-align: center;
+  list-style-type: none;
+ }
+
+h2 {
+  font-size: x-large;
+  font-family: Courier;
+  background: teal;
+  padding: 5px;
+  margin: 1;
+  color:white;
+  text-align: center;
+  list-style-type: none;
+ }
+
+body {
+  background: white;
+  text-align: center;
+}
+
+li {
+  font-size: medium;
+  font-family: Courier;
+  background:white;
+  color:teal;
+  text-align: left;
+  list-style-type: none;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: teal;
+  color: white;
+}

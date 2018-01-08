@@ -1,0 +1,8 @@
+{
+    "credentials": {
+        "clientId": "VALUE",
+        "tenantId": "VALUE",
+        "secret": "VALUE"
+    },
+    "subscriptionId": "VALUE"
+}

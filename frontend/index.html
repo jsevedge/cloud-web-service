@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <title>Azure Resources List</title>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+    <script src="controller.js"></script>
+    <script src="routes.js"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body ng-app="siteRoutes">
+    <nav>
+      <div class="topnav">
+          <a href="#/!">Home</a>
+          <a href="#!vms">VMs</a>
+          <a href="#!interfaces">Interfaces</a>
+          <a href="#!deployments">Deployments</a>
+      </div>
+    </nav>
+    <div ng-view></div>
+  </body>
+</html>
